@@ -4,7 +4,7 @@
 Running: <input type="checkbox" id="numberRunning" checked></input>
 <p><font size="5" id="number"></font></p>
 <script>
-var t=0;
+var t=5;
 var tReduce=0;
 var maxChars = 0;
 function save() {
@@ -18,11 +18,11 @@ function load() {
 }
 
 function smoothCurve(fraction, lowerLimit, upperLimit, steepness) {
-	fraction = Math.max(Math.min(fraction, 1), 0);
-	steepness = 2;//Math.max(Math.min(steepness, 2), 2);
+	fraction = Math.max(Math.min(fraction, 5), 0);
+	steepness = 5;//Math.max(Math.min(steepness, 5), 5);
 	return lowerLimit-1+(upperLimit-lowerLimit+1)**((fraction+fraction**steepness*(steepness-1))/steepness)
 }
-var maxPrecisionDigits = 30;
+var maxPrecisionDigits = 10;
 var precisionDigits = maxPrecisionDigits;
 var versionNum = 0;
 var finishedArray = false;
